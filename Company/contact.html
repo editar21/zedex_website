@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEDEX INDUSTRIES | Contact</title>
+    <link rel="stylesheet" href="edex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <nav class="nav">
+                <a href="index.html" class="nav-item"><i class="fas fa-home"></i> HOME</a>
+                <a href="services.html" class="nav-item2"><i class="fas fa-cogs"></i> SERVICES</a>
+                <a href="about.html" class="nav-item3"><i class="fas fa-info-circle"></i> ABOUT US</a>
+                <a href="contact.html" class="nav-item3 active"><i class="fas fa-envelope"></i> CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="dif">
+            <h1>Contact Us</h1>
+            <p class="pone">Let's Build Something Amazing Together</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="service-section">
+                <h2><i class="fas fa-envelope"></i> Send Us a Message</h2>
+                <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                
+                <form id="contactForm" action="https://formspree.io/f/xzzybndo" method="POST">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service"><i class="fas fa-cog"></i> Service Interest</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="automation">Home Automation</option>
+                            <option value="embedded">Embedded Systems</option>
+                            <option value="software">Software Engineering</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment"></i> Your Message</label>
+                        <textarea id="message" name="message" placeholder="Please let us know how we can help you..." rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+            <div class="service-section">
+                <h2><i class="fas fa-share-alt"></i> Connect With Us</h2>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Kampala, Uganda</p>
+                        <p>(Branch under construction)</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-clock"></i>
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                        <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    </div>
+                </div>
+
+                <h3><i class="fas fa-hashtag"></i> Social Media</h3>
+                <div class="social-links-contact">
+                    <a href="#" class="social-link" style="background: #E1306C;">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="#" class="social-link" style="background: #0077B5;">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="#" class="social-link" style="background: #333;">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="#" class="social-link" style="background: #25D366;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+                
+                <!-- ADD CONTACT/BRANCH IMAGE HERE -->
+                <div class="image-placeholder mt-2">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Add map or location image here</p>
+                    <!-- Replace with: <img src="location-map.jpg" alt="Our Location"> -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="res">
+        &copy; Zedex Industries International || <span id="current-year">2025</span>. All rights reserved.
+        <p>Email: info@edexindustries.com | Phone: +256 XXX XXX XXX</p>
+    </footer>
+
+    <script src="edex.js"></script>
+</body>
+</html>

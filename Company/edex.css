@@ -1,0 +1,350 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Navigation */
+header {
+    background: linear-gradient(90deg, #101A33 0%, #1a2b4d 100%);
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-item, .nav-item2, .nav-item3 {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-item:hover, .nav-item2:hover, .nav-item3:hover {
+    background: rgba(244, 100, 48, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-item::after, .nav-item2::after, .nav-item3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: rgb(244, 100, 48);
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after, .nav-item2:hover::after, .nav-item3:hover::after {
+    width: 80%;
+}
+
+/* Home Page Specific */
+.dif {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)),
+                url('placeholder-hero.jpg') center/cover no-repeat;
+    margin-bottom: 2rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 6rem;
+    background: linear-gradient(45deg, #101A33, rgb(244, 100, 48));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.pone {
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #101A33;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.diff {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    padding: 0 2rem;
+    font-weight: 500;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(45deg, rgb(244, 100, 48), #e67e22);
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(244, 100, 48, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 2rem auto;
+    display: block;
+    font-size: 1.1rem;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(244, 100, 48, 0.6);
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Services Page */
+.service-section {
+    background: white;
+    margin: 2rem auto;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    transition: transform 0.3s ease;
+}
+
+.service-section:hover {
+    transform: translateY(-5px);
+}
+
+h2, h3 {
+    color: #101A33;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid rgb(244, 100, 48);
+    display: inline-block;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.service-section p {
+    margin-bottom: 1rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.service-section ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.service-section li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.service-section li::before {
+    content: "▸";
+    color: rgb(244, 100, 48);
+    position: absolute;
+    left: 0;
+}
+
+/* Image Placeholders */
+.image-placeholder {
+    background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+    border-radius: 10px;
+    padding: 3rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: #888;
+    border: 2px dashed #ccc;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #aaa;
+}
+
+/* Contact Form */
+form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: 600;
+    color: #101A33;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: rgb(244, 100, 48);
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #101A33 0%, #1a2b4d 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.res {
+    background: linear-gradient(90deg, #101A33 0%, #1a2b4d 100%);
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.social-link {
+    color: #101A33;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: rgb(244, 100, 48);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    .service-section {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .dif {
+        padding: 2rem 1rem;
+        min-height: 50vh;
+    }
+    
+    button {
+        padding: 0.8rem 2rem;
+    }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mt-2 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 2rem; }
+.p-3 { padding: 3rem; }
